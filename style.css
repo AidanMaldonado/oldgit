@@ -1,0 +1,62 @@
+/* General Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+  color: white;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 1.6rem 3.2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Start */
+.start div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 40vh;
+}
+
+.start h1 {
+  font-size: 2rem;
+}
+
+/* Grid */
+.game-board {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+}
+
+.box {
+  height: 33.3vh;
+  min-width: 33.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
