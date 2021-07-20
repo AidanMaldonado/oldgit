@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Commission Page</title>
   </head>
   <body>
@@ -17,11 +18,11 @@
           <input type="text" id="user" name="fname" /><br />
           <label for="lname">Password:</label><br />
           <input type="text" id="pass" name="lname" /><br /><br />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" class="button" />
         </form>
 
         <br />
-        <button id="create-acc-btn">Create Account</button>
+        <button id="create-acc-btn" class="button">Create Account</button>
       </div>
 
       <div id="create-acc-section">
@@ -32,80 +33,90 @@
           <input type="text" id="lname" name="lname" /><br />
           <label for="lname">Re-Enter Password:</label><br />
           <input type="text" id="lname" name="lname" /><br /><br />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" class="button" />
         </form>
       </div>
     </section>
 
     <section id="app-section">
       <h2>Applications</h2>
-      <button id="new-btn">New Application</button>
-      <button id="app-btn">Application Status</button>
+      <button id="new-btn" class="button">New Application</button>
+      <button id="app-btn" class="button">Application Status</button>
     </section>
 
     <section id="new-app-section">
       <h2>New Applications</h2>
-      <form id="new-app-form">
+      <form
+        id="new-app-form"
+        action="https://formspree.io/f/mqkwdwkq"
+        method="POST"
+      >
         <label for="appname">Name of Applicant:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
         <label for="clientname">Name of New Client:</label>
-        <input type="text" id="clientname" name="clientname" /><br /><br />
+        <input
+          type="text"
+          id="clientname"
+          name="clientname"
+          required
+        /><br /><br />
         <label for="appname">Decision maker who selected/approved:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
         <label for="appname">Risk Manager:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
         <label for="appname">Third Party Administrator:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
         <label for="appname">TPA Account Manager:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
         <label for="appname">Insurance Company:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
         <label for="appname">Broker Company:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
         <label for="appname">Broker - Account Manager:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
         <label for="appname">Other VIPs involved:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
         <label for="appname">WC, GL, other:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
 
         <label for="appname">Which States/offices:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
 
         <label for="appname"
           >Have our rates been negotiated (see TGH before agreeing to any
           rates):</label
         >
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
 
         <label for="appname">Efforts made marketing this client:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
 
         <label for="appname">Any entertainment of this client:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
 
         <label for="appname"
           >Have we represented this client in the past:</label
         >
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
 
         <label for="appname"
           >Other H&R people who played a role in the development of this
           relationship:</label
         >
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
 
         <label for="appname">Commission sought (1-10%):</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
 
         <label for="appname"
           >Anyone else to be considered for a share of the commission:</label
         >
-        <input type="text" id="appname" name="appname" /><br /><br />
+        <input type="text" id="appname" name="appname" required /><br /><br />
 
         <label for="appname">Additional Comments:</label>
-        <input type="text" id="appname" name="appname" /><br /><br />
-        <input type="submit" value="Submit" />
+        <input type="text" id="appname" name="appname" required /><br /><br />
+        <input type="submit" value="Submit" class="button" />
+        <input type="submit" value="Save" class="button" />
       </form>
     </section>
     <section id="app-submit-section">
@@ -149,6 +160,10 @@
       <h2>Case 1032 Status</h2>
       <h4>Applicant: Quinn Brennan</h4>
       <h4>Date Applied: 7/12/21</h4>
+      <h4>Percentage Asked: 2%</h4>
+      <h4>Client: Target</h4>
+      <input type="text" placeholder="%" />
+      <input type="submit" class="button" />
     </section>
 
     <script src="script.js"></script>
