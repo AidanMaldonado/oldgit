@@ -1,171 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Commission Page</title>
+    <title>Heatmaps</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="map.js"></script>
   </head>
   <body>
-    <header>
-      <h1>H&R Commission Application</h1>
-    </header>
-    <section id="login-section">
-      <h2 id="login-heading">Login</h2>
-      <div id="acc-section">
-        <form id="login-form">
-          <label for="fname">Username:</label><br />
-          <input type="text" id="user" name="fname" /><br />
-          <label for="lname">Password:</label><br />
-          <input type="text" id="pass" name="lname" /><br /><br />
-          <input type="submit" value="Submit" class="button" />
-        </form>
+    <div id="floating-panel">
+      <button id="toggle-heatmap">Toggle Heatmap</button>
+      <button id="change-gradient">Change gradient</button>
+      <button id="change-radius">Change radius</button>
+      <button id="change-opacity">Change opacity</button>
+    </div>
+    <div id="map"></div>
 
-        <br />
-        <button id="create-acc-btn" class="button">Create Account</button>
-      </div>
-
-      <div id="create-acc-section">
-        <form>
-          <label for="fname">Username\Email:</label><br />
-          <input type="text" id="fname" name="fname" /><br /><br />
-          <label for="lname">Password:</label><br />
-          <input type="text" id="lname" name="lname" /><br />
-          <label for="lname">Re-Enter Password:</label><br />
-          <input type="text" id="lname" name="lname" /><br /><br />
-          <input type="submit" value="Submit" class="button" />
-        </form>
-      </div>
-    </section>
-
-    <section id="app-section">
-      <h2>Applications</h2>
-      <button id="new-btn" class="button">New Application</button>
-      <button id="app-btn" class="button">Application Status</button>
-    </section>
-
-    <section id="new-app-section">
-      <h2>New Applications</h2>
-      <form
-        id="new-app-form"
-        action="https://formspree.io/f/mqkwdwkq"
-        method="POST"
-      >
-        <label for="appname">Name of Applicant:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-        <label for="clientname">Name of New Client:</label>
-        <input
-          type="text"
-          id="clientname"
-          name="clientname"
-          required
-        /><br /><br />
-        <label for="appname">Decision maker who selected/approved:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-        <label for="appname">Risk Manager:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-        <label for="appname">Third Party Administrator:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-        <label for="appname">TPA Account Manager:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-        <label for="appname">Insurance Company:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-        <label for="appname">Broker Company:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-        <label for="appname">Broker - Account Manager:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-        <label for="appname">Other VIPs involved:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-        <label for="appname">WC, GL, other:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-
-        <label for="appname">Which States/offices:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-
-        <label for="appname"
-          >Have our rates been negotiated (see TGH before agreeing to any
-          rates):</label
-        >
-        <input type="text" id="appname" name="appname" required /><br /><br />
-
-        <label for="appname">Efforts made marketing this client:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-
-        <label for="appname">Any entertainment of this client:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-
-        <label for="appname"
-          >Have we represented this client in the past:</label
-        >
-        <input type="text" id="appname" name="appname" required /><br /><br />
-
-        <label for="appname"
-          >Other H&R people who played a role in the development of this
-          relationship:</label
-        >
-        <input type="text" id="appname" name="appname" required /><br /><br />
-
-        <label for="appname">Commission sought (1-10%):</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-
-        <label for="appname"
-          >Anyone else to be considered for a share of the commission:</label
-        >
-        <input type="text" id="appname" name="appname" required /><br /><br />
-
-        <label for="appname">Additional Comments:</label>
-        <input type="text" id="appname" name="appname" required /><br /><br />
-        <input type="submit" value="Submit" class="button" />
-        <input type="submit" value="Save" class="button" />
-      </form>
-    </section>
-    <section id="app-submit-section">
-      <h2>Application Submitted Successfully</h2>
-      <h3 id="app-num-display">Application #1032</h3>
-    </section>
-    <section id="status-section">
-      <h2>Application Status</h2>
-      <ul>
-        <!-- Temp Variables Remove Before Release-->
-        <li id="test2-link">
-          <a href="#">1032: Quinn Brennan - Petco - 7/12/21 - 2%</a>
-        </li>
-        <li><a href="#">1047: Quinn Brennan - Target - 7/28/21 - 1%</a></li>
-      </ul>
-      <div id="status-line">
-        <h4>Started</h4>
-        <h4>Submitted</h4>
-        <h2 style="color: teal">Awaiting Info</h2>
-        <h4>In Review</h4>
-        <h4>Completed (See Results)</h4>
-      </div>
-    </section>
-
-    <section id="mgmt-section">
-      <h2>Management Panel</h2>
-      <h3>Applications: 12</h3>
-      <div id="sorting-btns">
-        <button>Completed</button>
-        <button>Date</button>
-        <button>Percentage</button>
-      </div>
-      <ul>
-        <!-- Temp Variables Remove Before Release-->
-        <li id="test-link"><a href="#">1032: Quinn Brennan - 7/12/21</a></li>
-        <li><a href="#">1047: Jason Kolecke - 7/28/21</a></li>
-      </ul>
-    </section>
-
-    <section id="mgmt-status">
-      <h2>Case 1032 Status</h2>
-      <h4>Applicant: Quinn Brennan</h4>
-      <h4>Date Applied: 7/12/21</h4>
-      <h4>Percentage Asked: 2%</h4>
-      <h4>Client: Target</h4>
-      <input type="text" placeholder="%" />
-      <input type="submit" class="button" />
-    </section>
-
-    <script src="script.js"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjUYzvgPmanE8VFKDd9a5dC9lfVwFWHFQ&libraries=visualization&callback=initMap"
+      async
+    ></script>
   </body>
 </html>

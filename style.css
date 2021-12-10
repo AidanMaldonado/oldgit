@@ -1,64 +1,37 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #2980b9;
-  color: white;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-header {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  margin-bottom: 1rem;
-}
-
-section {
-  border: 2px solid black;
-  color: black;
-  padding: 2rem;
-
-  background-color: white;
-}
-
-#login-section {
-  margin-top: 2rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.35em 1.2em;
-  border: 0.1em solid black;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: black;
-  background-color: white;
-  text-align: center;
-  transition: all 0.5s;
-}
-
-.button:hover {
-  color: white;
-  background-color: black;
-  cursor: pointer;
-}
-
-@media all and (max-width: 30em) {
-  .button {
-    display: block;
-    margin: 0.4em auto;
-  }
-}
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+      }
+      
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: "Roboto", "sans-serif";
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      
+      #floating-panel {
+        background-color: #fff;
+        border: 1px solid #999;
+        left: 25%;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        z-index: 5;
+      }
