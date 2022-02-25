@@ -1,37 +1,128 @@
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-       #map {
-        height: 100%;
-      }
-      
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      
-      #floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 25%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: "Roboto", "sans-serif";
-        line-height: 30px;
-        padding-left: 10px;
-      }
-      
-      #floating-panel {
-        background-color: #fff;
-        border: 1px solid #999;
-        left: 25%;
-        padding: 5px;
-        position: absolute;
-        top: 10px;
-        z-index: 5;
-      }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)),
+    url("assets/deadbolts.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  height: 10vh;
+}
+
+nav {
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  text-shadow: black 2px 2px 2px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: ease-in-out 0.8s;
+}
+
+nav li a:hover {
+  transition: ease-in-out 0.8s;
+  font-size: 3rem;
+  color: #27ae60;
+}
+
+nav a:link,
+nav a:visited {
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+#logo,
+nav a {
+  font-family: "Special Elite", cursive;
+}
+
+#logo {
+  font-size: 3rem;
+  transition: ease-in-out 1s;
+  cursor: pointer;
+}
+
+#logo:hover {
+  text-shadow: #27ae60 3px 3px 3px;
+  transition: ease-in-out 1s;
+  color: black;
+}
+
+section {
+  z-index: 0;
+  height: 90vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 6rem;
+  color: black;
+  text-shadow: #27ae60 3px 3px 3px;
+  font-family: "Monoton", cursive;
+  overflow: hidden;
+}
+
+section h2 {
+  font-size: 4rem;
+  color: white;
+}
+
+#ticket-section {
+  font-family: "Chakra Petch", sans-serif;
+  text-shadow: black 2px 2px 2px;
+}
+
+#ticket-section p {
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+
+#ticket-section a,
+#about-section a {
+  color: #27ae60;
+}
+
+#merch-section,
+#about-section {
+  font-family: "Chakra Petch", sans-serif;
+  color: white;
+  text-shadow: black 2px 2px 2px;
+}
+
+#about-section h1 {
+  font-size: 6rem;
+}
+
+span {
+  transition: 2.5s;
+}
+
+#home-section h1 {
+  transition: 2s ease-in-out;
+}
+
+h1:hover {
+  transition: 2s ease-in-out;
+  transform: skew(7deg, 7deg);
+  cursor: pointer;
+}
